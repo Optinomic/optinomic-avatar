@@ -1,8 +1,25 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/owner/my-element)
+
 # \<optinomic-avatar\>
 
 Avatar with initials. gender & age - colors.
 
 For Documentation check the [component-page](https://optinomic.github.io/optinomic-avatar/components/optinomic-avatar/).
+
+
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="optinomic-avatar.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<optinomic-avatar firstname="Sonja" lastname="Muster" gender="female" size="small" birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
+```
 
 
 ## Install
