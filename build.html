@@ -1,0 +1,242 @@
+<html><head></head><body><div hidden="" by-polymer-bundler=""><link rel="import" href="../polymer/polymer.html"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300"></div><dom-module id="optinomic-avatar">
+    <template>
+        <style>
+        :host {
+            display: block;
+        }
+        
+        .circle {
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            background: #E0E0E0;
+            font-family: 'Roboto', sans-serif;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+        
+        .circle:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            text-shadow: 1px 1px #9E9E9E;
+        }
+        
+        .small {
+            width: 44px;
+            height: 44px;
+            font-size: 15px;
+            line-height: 45px;
+            font-weight: 300;
+        }
+        
+        .normal {
+            width: 58px;
+            height: 58px;
+            font-size: 22px;
+            line-height: 60px;
+            font-weight: 100;
+        }
+        
+        .male-50 {
+            background: #E8EAF6 !important;
+            color: #000000;
+        }
+        
+        .male-100 {
+            background: #C5CAE9 !important;
+            color: #000000;
+        }
+        
+        .male-200 {
+            background: #9FA8DA !important;
+            color: #000000;
+        }
+        
+        .male-300 {
+            background: #7986CB !important;
+            color: #FFFFFF;
+        }
+        
+        .male-400 {
+            background: #5C6BC0 !important;
+            color: #FFFFFF;
+        }
+        
+        .male-500 {
+            background: #3F51B5 !important;
+            color: #FFFFFF;
+        }
+        
+        .male-600 {
+            background: #3949AB !important;
+            color: #FFFFFF;
+        }
+        
+        .male-700 {
+            background: #303F9F !important;
+            color: #FFFFFF;
+        }
+        
+        .male-800 {
+            background: #283593 !important;
+            color: #FFFFFF;
+        }
+        
+        .female-900 {
+            background: #1A237E !important;
+            color: #FFFFFF;
+        }
+        
+        .female-50 {
+            background: #FCE4EC !important;
+            color: #000000;
+        }
+        
+        .female-100 {
+            background: #F8BBD0 !important;
+            color: #000000;
+        }
+        
+        .female-200 {
+            background: #F48FB1 !important;
+            color: #000000;
+        }
+        
+        .female-300 {
+            background: #F06292 !important;
+            color: #FFFFFF;
+        }
+        
+        .female-400 {
+            background: #EC407A !important;
+            color: #FFFFFF;
+        }
+        
+        .female-500 {
+            background: #E91E63 !important;
+            color: #FFFFFF;
+        }
+        
+        .female-600 {
+            background: #D81B60 !important;
+            color: #FFFFFF;
+        }
+        
+        .female-700 {
+            background: #C2185B !important;
+            color: #FFFFFF;
+        }
+        
+        .female-800 {
+            background: #AD1457 !important;
+            color: #FFFFFF;
+        }
+        
+        .female-900 {
+            background: #880E4F !important;
+            color: #FFFFFF;
+        }
+        </style>
+        <div class$="circle [[age_css]] [[size]]">[[initials]]</div>
+    </template>
+    <script>
+    Polymer({
+
+        is: 'optinomic-avatar',
+
+        properties: {
+            firstname: {
+                type: String
+            },
+            lastname: {
+                type: String
+            },
+            gender: {
+                type: String,
+                value: 'male',
+            },
+            birthdate: {
+                type: Date
+            },
+            size: {
+                type: String,
+                value: 'normal',
+            },
+        },
+
+        getAge: function(dateString) {
+
+            this.age = null;
+            this.age_css = this.gender + '-500';
+
+            if ((dateString !== '') && (dateString !== undefined)) {
+
+                var today = new Date();
+                var birthDate = new Date(dateString);
+                var age = today.getFullYear() - birthDate.getFullYear();
+                var m = today.getMonth() - birthDate.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                this.age = age;
+
+
+                if (this.age > 0) {
+                    this.age_css = this.gender + '-50';
+                };
+                if (this.age > 10) {
+                    this.age_css = this.gender + '-100';
+                };
+                if (this.age > 20) {
+                    this.age_css = this.gender + '-200';
+                };
+                if (this.age > 30) {
+                    this.age_css = this.gender + '-300';
+                };
+                if (this.age > 40) {
+                    this.age_css = this.gender + '-400';
+                };
+                if (this.age > 50) {
+                    this.age_css = this.gender + '-500';
+                };
+                if (this.age > 60) {
+                    this.age_css = this.gender + '-600';
+                };
+                if (this.age > 70) {
+                    this.age_css = this.gender + '-700';
+                };
+                if (this.age > 80) {
+                    this.age_css = this.gender + '-800';
+                };
+                if (this.age > 90) {
+                    this.age_css = this.gender + '-900';
+                };
+
+
+            };
+        },
+
+        setInitials: function() {
+            this.initials = '';
+
+            if ((this.lastname !== '') && (this.lastname !== undefined)) {
+                this.initials = this.initials + this.lastname.substring(0, 2);
+            };
+
+            if ((this.firstname !== '') && (this.firstname !== undefined)) {
+                this.initials = this.initials + this.firstname.substring(0, 1);
+            };
+
+            if (this.initials === '') {
+                this.initials = '?'
+            };
+        },
+
+        ready: function() {
+            this.setInitials();
+            this.getAge(this.birthdate);
+        },
+
+    });
+    </script>
+</dom-module>
+</body></html>
