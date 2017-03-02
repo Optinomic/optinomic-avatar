@@ -1,42 +1,33 @@
 # \<optinomic-avatar\>
 
-Avatar with initials - colorbased gender
+Avatar with initials. gender & age - colors.
 
-## Install the Polymer-CLI
+For Documentation check the [component-page](https://optinomic.github.io/optinomic-avatar/components/optinomic-avatar/).
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
 
-## Viewing Your Application
-
-```
-$ polymer serve
-```
-
-## Building Your Application
+## Install
 
 ```
-$ polymer build
+$ bower install optinomic/optinomic-avatar
 ```
-
-This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
-containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
-CSS, and JS optimizers.
-
-You can serve the built versions by giving `polymer serve` a folder to serve
-from:
-
-```
-$ polymer serve build/bundled
-```
-
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
-
 
 ## vulcanize
+The vulcanized version of `optinomic-avatar.html` is stored as `optinomic-avatar.vulcanized.html`. The vulcanized version was created by:
+
+```
 vulcanize optinomic-avatar.html -o optinomic-avatar.vulcanized.html --strip-comments --inline-scripts --inline-css
+```
+
+## CDN
+
+Optinomic - Elements are also available CDN:
+
+### Version 0.0.1
+
+```html
+<link rel="import" href="https://cdn.rawgit.com/Optinomic/apps/4b9e90d1/lib/polymer/elements/optinomic-redux-store.html">
+```
+
+```html
+<link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/89efceac/optinomic-avatar.vulcanized.html">
+```
