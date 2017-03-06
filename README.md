@@ -18,7 +18,7 @@ For Documentation check the [component-page](https://optinomic.github.io/optinom
 ```
 -->
 ```html
-<optinomic-avatar firstname="Sonja" lastname="Muster" gender="female" birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
+<optinomic-avatar firstname="Max" lastname="Muster" gender="male" birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
 
 <optinomic-avatar firstname="Sonja" lastname="Muster" gender="female" small birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
 ```
