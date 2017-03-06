@@ -18,7 +18,9 @@ For Documentation check the [component-page](https://optinomic.github.io/optinom
 ```
 -->
 ```html
-<optinomic-avatar firstname="Sonja" lastname="Muster" gender="female" size="small" birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
+<optinomic-avatar firstname="Sonja" lastname="Muster" gender="female" birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
+
+<optinomic-avatar firstname="Sonja" lastname="Muster" gender="female" small birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
 ```
 
 
@@ -39,9 +41,15 @@ Make sure that you import the following Dependencies. These are not imported ins
 
 Optinomic - Elements are also available CDN:
 
-### Version 0.0.2
+### Version 0.0.3
 
 ```html
-<link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/66ed706c/optinomic-avatar.html">
+<link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/57bcaa2f/optinomic-avatar.html">
 ```
 
+### Inside Optinomic-App-Templates you simply could use this syntax to have always the latest version:
+```html
+<head>
+    include(../lib/polymer/imports/optinomic-avatar.m4)
+</head>
+```
