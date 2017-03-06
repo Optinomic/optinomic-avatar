@@ -28,13 +28,6 @@ For Documentation check the [component-page](https://optinomic.github.io/optinom
 $ bower install optinomic/optinomic-avatar
 ```
 
-## vulcanize
-The vulcanized version of `optinomic-avatar.html` is stored as `optinomic-avatar.vulcanized.html`. The vulcanized version was created by:
-
-```
-vulcanize optinomic-avatar.html -o optinomic-avatar.vulcanized.html --strip-comments --inline-scripts --inline-css
-```
-
 ## Dependencies
 
 Make sure that you import the following Dependencies. These are not imported inside the element itself.
@@ -52,6 +45,3 @@ Optinomic - Elements are also available CDN:
 <link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/66ed706c/optinomic-avatar.html">
 ```
 
-```html
-<link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/89efceac/optinomic-avatar.vulcanized.html">
-```
