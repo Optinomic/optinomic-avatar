@@ -11,6 +11,7 @@ For Documentation check the [component-page](https://optinomic.github.io/optinom
 ```
 <custom-element-demo>
   <template>
+    <link rel="import" href="../polymer/polymer.html">
     <link rel="import" href="optinomic-avatar.html">
     <next-code-block></next-code-block>
   </template>
@@ -19,7 +20,7 @@ For Documentation check the [component-page](https://optinomic.github.io/optinom
 -->
 ```html
 <optinomic-avatar firstname="Max" lastname="Muster" gender="male" birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
-
+<p>&nbsp;</p>
 <optinomic-avatar small firstname="Sonja" lastname="Muster" gender="female" birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
 ```
 
@@ -41,7 +42,7 @@ Make sure that you import the following dependencies to use this element:
 
 ## CDN
 
-Optinomic - Elements are also available CDN:
+Optinomic - Elements are also CDN available:
 
 ### Version 0.0.3
 
