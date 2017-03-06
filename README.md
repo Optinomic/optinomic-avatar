@@ -32,9 +32,11 @@ $ bower install optinomic/optinomic-avatar
 
 ## Dependencies
 
-Make sure that you import the following Dependencies. These are not imported inside the element itself.
+Make sure that you import the following dependencies to use this element:
 
+```html
 <link rel="import" href="../polymer/polymer.html">
+```
 
 
 ## CDN
@@ -47,7 +49,8 @@ Optinomic - Elements are also available CDN:
 <link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/57bcaa2f/optinomic-avatar.html">
 ```
 
-### Inside Optinomic-App-Templates you simply could use this syntax to have always the latest version:
+### Inside Optinomic-App-Templates 
+Simply add the following lines to use always the latest version:
 ```html
 <head>
     include(../lib/polymer/imports/optinomic-avatar.m4)
