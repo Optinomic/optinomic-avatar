@@ -4,8 +4,6 @@
 
 Avatar with initials. gender & age - colors.
 
-For Documentation check the [component-page](https://optinomic.github.io/optinomic-avatar/components/optinomic-avatar/).
-
 
 <!--
 ```
@@ -23,6 +21,8 @@ For Documentation check the [component-page](https://optinomic.github.io/optinom
 <p>&nbsp;</p>
 <optinomic-avatar small firstname="Sonja" lastname="Muster" gender="female" birthdate="1993-05-21T00:00:00.000000000000Z"></optinomic-avatar>
 ```
+
+For Documentation check the [component-page](https://optinomic.github.io/optinomic-avatar/components/optinomic-avatar/).
 
 
 ## Install
@@ -44,7 +44,7 @@ Make sure that you import the following dependencies to use this element:
 
 Optinomic - Elements are also CDN available:
 
-### Version 0.0.3
+### Version 0.0.4
 
 ```html
 <link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/57bcaa2f/optinomic-avatar.html">
