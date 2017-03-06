@@ -39,10 +39,10 @@ vulcanize optinomic-avatar.html -o optinomic-avatar.vulcanized.html --strip-comm
 
 Optinomic - Elements are also available CDN:
 
-### Version 0.0.1
+### Version 0.0.2
 
 ```html
-<link rel="import" href="https://cdn.rawgit.com/Optinomic/apps/4b9e90d1/lib/polymer/elements/optinomic-redux-store.html">
+<link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/66ed706c/optinomic-avatar.html">
 ```
 
 ```html
