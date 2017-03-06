@@ -35,6 +35,13 @@ The vulcanized version of `optinomic-avatar.html` is stored as `optinomic-avatar
 vulcanize optinomic-avatar.html -o optinomic-avatar.vulcanized.html --strip-comments --inline-scripts --inline-css
 ```
 
+## Dependencies
+
+Make sure that you import the following Dependencies. These are not imported inside the element itself.
+
+<link rel="import" href="../polymer/polymer.html">
+
+
 ## CDN
 
 Optinomic - Elements are also available CDN:
