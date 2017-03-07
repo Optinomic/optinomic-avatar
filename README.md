@@ -9,7 +9,6 @@ Avatar with initials. gender & age - colors.
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="../polymer/polymer.html">
     <link rel="import" href="optinomic-avatar.html">
     <next-code-block></next-code-block>
   </template>
@@ -44,7 +43,7 @@ Make sure that you import the following dependencies to use this element:
 
 Optinomic - Elements are also CDN available:
 
-### Version 0.0.4
+### Version 0.0.5
 
 ```html
 <link rel="import" href="https://cdn.rawgit.com/Optinomic/optinomic-avatar/57bcaa2f/optinomic-avatar.html">
