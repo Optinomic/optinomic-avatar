@@ -1,3 +1,7 @@
+
+<link rel="import" href="../polymer/polymer.html">
+
+
 <!--
 `optinomic-avatar`
 Avatar with initials - colorbased gender
@@ -168,7 +172,7 @@ Avatar with initials - colorbased gender
             },
         },
 
-        getAge: function(dateString) {
+        __getAge: function(dateString) {
 
             this.age = null;
             this.age_css = this.gender + '-500';
@@ -220,7 +224,7 @@ Avatar with initials - colorbased gender
             };
         },
 
-        setInitials: function() {
+        __setInitials: function() {
             this.initials = '';
 
             if ((this.lastname !== '') && (this.lastname !== undefined)) {
@@ -236,7 +240,7 @@ Avatar with initials - colorbased gender
             };
         },
 
-        setSizeStr: function() {
+        __setSizeStr: function() {
           this.size = 'normal';
           if (this.small) {
             this.size = 'small';
@@ -244,9 +248,9 @@ Avatar with initials - colorbased gender
         },
 
         ready: function() {
-            this.setSizeStr();
-            this.setInitials();
-            this.getAge(this.birthdate);
+            this.__setSizeStr();
+            this.__setInitials();
+            this.__getAge(this.birthdate);
         },
 
     });
