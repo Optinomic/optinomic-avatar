@@ -1,7 +1,4 @@
-
 <link rel="import" href="../polymer/polymer.html">
-
-
 <!--
 `optinomic-avatar`
 Avatar with initials - colorbased gender
@@ -154,21 +151,26 @@ Avatar with initials - colorbased gender
 
         properties: {
             firstname: {
-                type: String
+                type: String,
+                observer: '_dataChanged'
             },
             lastname: {
-                type: String
+                type: String,
+                observer: '_dataChanged'
             },
             gender: {
                 type: String,
                 value: 'male',
+                observer: '_dataChanged'
             },
             birthdate: {
-                type: Date
+                type: Date,
+                observer: '_dataChanged'
             },
             small: {
                 type: Boolean,
                 value: false,
+                observer: '_dataChanged'
             },
         },
 
@@ -241,13 +243,13 @@ Avatar with initials - colorbased gender
         },
 
         __setSizeStr: function() {
-          this.size = 'normal';
-          if (this.small) {
-            this.size = 'small';
-          };
+            this.size = 'normal';
+            if (this.small) {
+                this.size = 'small';
+            };
         },
 
-        ready: function() {
+        _dataChanged: function() {
             this.__setSizeStr();
             this.__setInitials();
             this.__getAge(this.birthdate);
