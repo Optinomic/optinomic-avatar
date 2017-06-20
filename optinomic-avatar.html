@@ -3,7 +3,7 @@
 `optinomic-avatar`
 Avatar with initials - colorbased gender
 
-@demo demo/index.html 
+@demo demo/index.html
 -->
 <dom-module id="optinomic-avatar">
     <template>
@@ -142,7 +142,7 @@ Avatar with initials - colorbased gender
             color: #FFFFFF;
         }
         </style>
-        <div class$="circle [[age_css]] [[size]]">[[initials]]</div>
+        <div class$="circle [[age_css]] [[size]]">[[my_initials]]</div>
     </template>
     <script>
     Polymer({
@@ -155,6 +155,10 @@ Avatar with initials - colorbased gender
                 observer: '_dataChanged'
             },
             lastname: {
+                type: String,
+                observer: '_dataChanged'
+            },
+            initials: {
                 type: String,
                 observer: '_dataChanged'
             },
@@ -227,18 +231,25 @@ Avatar with initials - colorbased gender
         },
 
         __setInitials: function() {
-            this.initials = '';
 
-            if ((this.lastname !== '') && (this.lastname !== undefined)) {
-                this.initials = this.initials + this.lastname.substring(0, 2);
-            };
+            if ((this.initials === '') || (this.initials === undefined)) {
 
-            if ((this.firstname !== '') && (this.firstname !== undefined)) {
-                this.initials = this.initials + this.firstname.substring(0, 1);
-            };
+                this.my_initials = '';
 
-            if (this.initials === '') {
-                this.initials = '?'
+                if ((this.lastname !== '') && (this.lastname !== undefined)) {
+                    this.my_initials = this.my_initials + this.lastname.substring(0, 2);
+                };
+
+                if ((this.firstname !== '') && (this.firstname !== undefined)) {
+                    this.my_initials = this.my_initials + this.firstname.substring(0, 1);
+                };
+
+                if (this.my_initials === '') {
+                    this.my_initials = '?';
+                };
+
+            } else {
+                this.my_initials = this.initials;
             };
         },
 
